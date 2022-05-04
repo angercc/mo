@@ -1,0 +1,1 @@
+loadstring(game:HttpGet'https://aim-ware.herokuapp.com/script?key=KEY_HERE')()

@@ -1,0 +1,11 @@
+const fs = require('fs');
+const fetch = require('node-fetch');
+
+fetch(`https://aim-ware.herokuapp.com/get-whitelist?zLKRrdfyoOwZicsYLGGt=czvr0wwbftl9pqup5gglarl3tzzizi9em1dz3zq23y02y7jzu4u8d8vwoh9hsjc9pqqivgkv9z804o61wuzazh4jpf5864fhpq3oh36e62dbege8ztukcs9cedc6sdguyixi2thgjswjelnv4phaarify0yjt70md1ok8j7ugu7iv0lgievvc629r7vppkj8nyh0v6cptpoiq0m58zd2lnrp26jadwdp0fpavs80teybb9rq9hri4limbfbc926grh1v7rlwzbu2vw1f5bz9amg141d5q71y19anxajs9beo9tsmmmnys04t3xuxtbmhgmc760z5s599poqq9016jx9d5d35qunsgaucsyz7hnvezae3755utpfnvztxoxduzqppq6mm1yi6le4jtmwudcoywk2pzb6kxqqwf4phaktd8ukn84cdusafvp483hczmshb9ipxcctvct2my1c9sz7pr0jdgb2ya1peq7878zeua3ou0qqfymd5v7hpjbxz0qtu4eeiih8q96hdv0mu9m6aocepo8oms00wvudu9ngk04rd9cclxkmb1991py4c03qdd7u4okbmoyo9l23ndfmn0ah9seepklyk6p5fdh1bfew17lvfdln0hnv7h6i6ukihaltilpkrttzv8f47ld5f85et70g5nv75ytny03xqkg9ni8nxn6yxdxa6rkupj43osxnh9g16nym6anao7zyz04rqygik0g4r8at9ze9o3g4zrtzy5tm6i7t2xapepb5vm593cblwbxnz9eoojvb0oun7vnf0l1kyo0xvi5v6z3mpfsk045gqtyicmqha62ujf8evpxvtxm9jkrhlvzx7pw4qntkz5st4k1s7jbth74bck0pcdufdzxfa92q8z4mqdypspqbn39bmxztlltdugx1xxah7usi4qbe6c5l2zrz1zgqq37bm9wbc7bmr93e2ah5x6bxmzugjvpixtta5betj2hc3x7hnjv5o`).then(r=>r.json().then(d=>{
+	// console.log(d);
+	fs.writeFile(`${__dirname}/../whitelist.json`,JSON.stringify(d),{encoding:'utf-8'},e=>{
+		if(e!==null){
+			console.log(e)
+		}
+	})
+}));
